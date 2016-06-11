@@ -1,6 +1,5 @@
 # react-webpack-es2015-boilerplate
 
-1. Fork this repository
-2. `npm install`
-3. `npm run webpack`
-4. `npm run serve` (in another console)
+1. `npm install`
+2. `npm run webpack`
+3. `npm run serve` (in another console)
