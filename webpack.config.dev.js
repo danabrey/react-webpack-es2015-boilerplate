@@ -1,10 +1,11 @@
+var webpack = require('webpack');
 var WebpackNotifier = require('webpack-notifier');
 
 module.exports = {
     entry: './src/app.js',
     output: {
         path: './dist',
-        filename: 'webpack-dev-build.js'
+        filename: 'bundle.js'
     },
     devtool: 'source-map',
     module: {
@@ -14,11 +15,12 @@ module.exports = {
             exclude: /node_modules/,
             query: {
                 cacheDirectory: true,
-                presets: ["es2015", "react"]
+                presets: ["es2015", "react", "react-hmre"]
             }
         }]
     },
     plugins: [
-        new WebpackNotifier()
+        new WebpackNotifier(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }

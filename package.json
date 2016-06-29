@@ -1,10 +1,10 @@
 {
   "name": "react-webpack-es2015-boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for a React/ES2015 app with Webpack and live-server",
+  "description": "Boilerplate for a React/ES2015 app with Webpack, webpack-dev-server and hot module replacement.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base dist/"
+    "start": "webpack-dev-server --config webpack.config.dev.js --inline --progress --content-base dist/"
   },
   "author": "Dan Abrey",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-notifier": "^1.3.0"
